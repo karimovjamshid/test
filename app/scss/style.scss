@@ -279,12 +279,23 @@
         justify-content: center;
         &:last-child{
             flex-basis: 5%;
-            margin-bottom: -.8rem;
         }
         button{
             width: 65px;
             height: 65px;
             cursor: pointer;
+        }
+        
+        input{
+            background-color: transparent;
+            border: none;
+            border-bottom: 3px solid $light;
+            padding: 1em 1em .5em 0;
+            color: $light;
+            font-size: 1.1rem;
+            &:focus{
+                outline: none;
+            }
         }
     }
     &__name{

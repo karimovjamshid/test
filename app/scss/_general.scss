@@ -37,6 +37,16 @@ ul, li{
     padding: .43em 2em;
     color: $light;
     font-family: $text;
+    transition: background-color .3s linear, color .3s linear;
+    &:hover{
+        background-color: $light;
+        color: $dark;
+        cursor: pointer;
+    }
+    &--alt{
+        background-color: $gray;
+        border-color: $gray;
+    }
 }
 .title{
     text-transform: uppercase;

@@ -42,7 +42,15 @@ ul, li {
   border: 2px solid #D9D9D9;
   padding: .43em 2em;
   color: #D9D9D9;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  transition: background-color .3s linear, color .3s linear; }
+  .btn:hover {
+    background-color: #D9D9D9;
+    color: #0D0D0D;
+    cursor: pointer; }
+  .btn--alt {
+    background-color: #3B3B3B;
+    border-color: #3B3B3B; }
 
 .title {
   text-transform: uppercase;
@@ -423,12 +431,20 @@ ul, li {
     .contact__item:last-child {
       -webkit-flex-basis: 5%;
       -ms-flex-preferred-size: 5%;
-      flex-basis: 5%;
-      margin-bottom: -.8rem; }
+      flex-basis: 5%; }
     .contact__item button {
       width: 65px;
       height: 65px;
       cursor: pointer; }
+    .contact__item input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 3px solid #D9D9D9;
+      padding: 1em 1em .5em 0;
+      color: #D9D9D9;
+      font-size: 1.1rem; }
+      .contact__item input:focus {
+        outline: none; }
   .contact__name {
     text-transform: capitalize;
     font-size: 1.1rem;

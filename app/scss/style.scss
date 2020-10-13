@@ -4,6 +4,9 @@
 /* Header
 ===================*/
 .header-nav{
+    @media screen and (max-width: $tablet){
+        display: none;
+    }
     position: absolute;
     top: 0;
     right: 0;
@@ -38,8 +41,16 @@
             transition: width .3s linear;
         }
     }
+    
 }
-
+.header-nav.fixed{
+    background-color: $gray;
+    position: fixed;
+    z-index: 3000;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 0;
+}
 .hero{
     width: 100vw;
     height: 100vh;
@@ -71,7 +82,9 @@
         font-weight: 700;
         text-transform: uppercase;
         color: $light;
-        
+        @media screen and (max-width: $tablet){
+           font-size: 3rem;
+        }
         span{
             color: $accent;
         }
@@ -92,16 +105,28 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        @media screen and (max-width: $tablet){
+            justify-content: center;
+        }
     }
     &__item{
         flex-basis: 21%;
+        @media screen and (max-width: $tablet){
+            flex-basis: 90%;}
         &:first-child{
             flex-basis: 35%;
             margin-top: 7.5rem;
+            @media screen and (max-width: $tablet){
+                flex-basis: 90%;}
         }
     }
     &__img{
         margin: 0 auto 2rem;
+        @media screen and (max-width: $tablet){
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
         img{
             display: block;
         }
@@ -144,9 +169,17 @@
     &__item{
         flex-basis: 23%;
         text-align: center;
+        @media screen and (max-width: $tablet){
+            flex-basis: 90%;
+            margin-top: 1rem;
+        }
         &:last-child{
             flex-basis: 35%;
             text-align: left;
+            @media screen and (max-width: $tablet){
+                flex-basis: 90%;
+                margin-top: 1rem;
+            }
             .projects-top__text{
                 margin-top: 2rem;
             }
@@ -168,8 +201,14 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media screen and (max-width: $tablet){
+        justify-content: center;
+    }
     &__item{
         flex-basis: 31%;
+        @media screen and (max-width: $tablet){
+            flex-basis: 90%;
+        }
     }
     &__img{
         img{
@@ -206,18 +245,33 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
         .services__text{
             margin-left: 4rem;
             font-size: 1rem;
             line-height: 1.5;
+            @media screen and (max-width: $tablet){
+                flex-basis: 90%;
+                text-align: center;
+                margin-top: 2rem;
+                margin-left: 0;
+            }
         }
     }
     &__content{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        @media screen and (max-width: $tablet){
+            justify-content: center;
+        }
     }
-    
+    .title{
+        @media screen and (max-width: $tablet){
+            flex-basis: 90%;
+            
+        }
+    }
     &__item{
         flex-basis: 28%;
         margin: 1rem 0;
@@ -225,6 +279,9 @@
         border-left: 3px solid $light;
         padding: 4rem 2rem;
         transition: background-color .3s linear, transform .3s linear;
+        @media screen and (max-width: $tablet){
+            flex-basis: 90%;
+        }
         &:hover{
             cursor: pointer;
             background-color: $gray;
@@ -277,6 +334,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @media screen and (max-width: $tablet){
+            flex-basis: 90%;
+            margin-bottom: 2rem;
+        }
         &:last-child{
             flex-basis: 5%;
         }
@@ -332,6 +393,9 @@
     
     &__item{
         flex-basis: 47%;
+        @media screen and (max-width: $tablet){
+            flex-basis: 90%;
+        }
         img{
             display: block;
             width: 100%;

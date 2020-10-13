@@ -3,6 +3,7 @@
  *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 html{
     font-size: 15px;
@@ -13,6 +14,7 @@ body{
     background: url("../img/bgPattern.png") $dark top center;
     color: $light;
     overflow-x: hidden;
+   
 }
 h1,h2,h3,h4,h5,h6{
     font-family: $heading;

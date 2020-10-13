@@ -8,7 +8,8 @@
  ===================*/
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 html {
   font-size: 15px;
@@ -103,6 +104,9 @@ ul, li {
   justify-content: center;
   margin-top: 2rem;
   z-index: 2; }
+  @media screen and (max-width: 995px) {
+    .header-nav {
+      display: none; } }
   .header-nav__link {
     margin-left: 2rem;
     color: #D9D9D9;
@@ -131,6 +135,14 @@ ul, li {
       -webkit-transition: width .3s linear;
       -o-transition: width .3s linear;
       transition: width .3s linear; }
+
+.header-nav.fixed {
+  background-color: #3B3B3B;
+  position: fixed;
+  z-index: 3000;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 0; }
 
 .hero {
   width: 100vw;
@@ -168,6 +180,9 @@ ul, li {
     font-weight: 700;
     text-transform: uppercase;
     color: #D9D9D9; }
+    @media screen and (max-width: 995px) {
+      .hero__title {
+        font-size: 3rem; } }
     .hero__title span {
       color: #D12E2E; }
   .hero__desc {
@@ -191,19 +206,46 @@ ul, li {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+  @media screen and (max-width: 995px) {
+    .about__content {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .about__item {
   -webkit-flex-basis: 21%;
   -ms-flex-preferred-size: 21%;
   flex-basis: 21%; }
+  @media screen and (max-width: 995px) {
+    .about__item {
+      -webkit-flex-basis: 90%;
+      -ms-flex-preferred-size: 90%;
+      flex-basis: 90%; } }
   .about__item:first-child {
     -webkit-flex-basis: 35%;
     -ms-flex-preferred-size: 35%;
     flex-basis: 35%;
     margin-top: 7.5rem; }
+    @media screen and (max-width: 995px) {
+      .about__item:first-child {
+        -webkit-flex-basis: 90%;
+        -ms-flex-preferred-size: 90%;
+        flex-basis: 90%; } }
 
 .about__img {
   margin: 0 auto 2rem; }
+  @media screen and (max-width: 995px) {
+    .about__img {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-top: 2rem; } }
   .about__img img {
     display: block; }
 
@@ -260,11 +302,23 @@ ul, li {
     -ms-flex-preferred-size: 23%;
     flex-basis: 23%;
     text-align: center; }
+    @media screen and (max-width: 995px) {
+      .projects-top__item {
+        -webkit-flex-basis: 90%;
+        -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+        margin-top: 1rem; } }
     .projects-top__item:last-child {
       -webkit-flex-basis: 35%;
       -ms-flex-preferred-size: 35%;
       flex-basis: 35%;
       text-align: left; }
+      @media screen and (max-width: 995px) {
+        .projects-top__item:last-child {
+          -webkit-flex-basis: 90%;
+          -ms-flex-preferred-size: 90%;
+          flex-basis: 90%;
+          margin-top: 1rem; } }
       .projects-top__item:last-child .projects-top__text {
         margin-top: 2rem; }
   .projects-top__number {
@@ -288,10 +342,21 @@ ul, li {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+  @media screen and (max-width: 995px) {
+    .projects-bottom {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
   .projects-bottom__item {
     -webkit-flex-basis: 31%;
     -ms-flex-preferred-size: 31%;
     flex-basis: 31%; }
+    @media screen and (max-width: 995px) {
+      .projects-bottom__item {
+        -webkit-flex-basis: 90%;
+        -ms-flex-preferred-size: 90%;
+        flex-basis: 90%; } }
   .projects-bottom__img img {
     display: block;
     width: 100%;
@@ -330,11 +395,22 @@ ul, li {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
     .services__header .services__text {
       margin-left: 4rem;
       font-size: 1rem;
       line-height: 1.5; }
+      @media screen and (max-width: 995px) {
+        .services__header .services__text {
+          -webkit-flex-basis: 90%;
+          -ms-flex-preferred-size: 90%;
+          flex-basis: 90%;
+          text-align: center;
+          margin-top: 2rem;
+          margin-left: 0; } }
   .services__content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -347,6 +423,17 @@ ul, li {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
+    @media screen and (max-width: 995px) {
+      .services__content {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
+  @media screen and (max-width: 995px) {
+    .services .title {
+      -webkit-flex-basis: 90%;
+      -ms-flex-preferred-size: 90%;
+      flex-basis: 90%; } }
   .services__item {
     -webkit-flex-basis: 28%;
     -ms-flex-preferred-size: 28%;
@@ -360,6 +447,11 @@ ul, li {
     -o-transition: background-color .3s linear, transform .3s linear;
     transition: background-color .3s linear, transform .3s linear;
     transition: background-color .3s linear, transform .3s linear, -webkit-transform .3s linear; }
+    @media screen and (max-width: 995px) {
+      .services__item {
+        -webkit-flex-basis: 90%;
+        -ms-flex-preferred-size: 90%;
+        flex-basis: 90%; } }
     .services__item:hover {
       cursor: pointer;
       background-color: #3B3B3B;
@@ -428,6 +520,12 @@ ul, li {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center; }
+    @media screen and (max-width: 995px) {
+      .contact__item {
+        -webkit-flex-basis: 90%;
+        -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+        margin-bottom: 2rem; } }
     .contact__item:last-child {
       -webkit-flex-basis: 5%;
       -ms-flex-preferred-size: 5%;
@@ -482,6 +580,11 @@ ul, li {
     -webkit-flex-basis: 47%;
     -ms-flex-preferred-size: 47%;
     flex-basis: 47%; }
+    @media screen and (max-width: 995px) {
+      .address__item {
+        -webkit-flex-basis: 90%;
+        -ms-flex-preferred-size: 90%;
+        flex-basis: 90%; } }
     .address__item img {
       display: block;
       width: 100%;

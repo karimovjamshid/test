@@ -1,16 +1,27 @@
 /* Colors
 =================== */
-$accent: #D12E2E;
-$dark:   #0D0D0D;
-$gray:   #3B3B3B;
-$light:  #D9D9D9;
-$white:  #fff;
+$accent: linear-gradient(#d12e2e,#4E0E0E);
+$dark:      #0D0D0D;
+$dark-alt:  #0c0c0c;
+$gray:      #3B3B3B;
+$light:     #D9D9D9;
+$white:     #fff;
+$alert: #d12e2e;
 
 /* Fonts
 =================== */
+@font-face{
+    font-family: 'mainFont';
+    src: url(../fonts/DecimaMonoPro-Bold.otf),
+    url(../fonts/DecimaMonoPro-BoldItalic.otf),
+    url(../fonts/DecimaMonoPro-Italic.otf),
+    url(../fonts/DecimaMonoPro.otf),
+    url(../fonts/DecimaMonoProLt-Italic.otf),
+    url(../fonts/DecimaMonoProLt.otf);
+}
 
-$text:    'Montserrat', sans-serif;
-$heading: 'Montserrat', sans-serif;
+$text:    'mainFont', sans-serif;
+$heading: 'mainFont', sans-serif;
 
 /* Media queries
 =================== */
@@ -18,3 +29,4 @@ $tablet:    995px;
 $mobile:    670px;
 $mobile-sm: 420px;
 $mobile-xs: 350px;
+

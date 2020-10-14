@@ -10,7 +10,7 @@ html{
 }
 body{
     font-family: $text;
-    background: url("../img/bgPattern.png") $dark top center;
+    background: url("../img/bgPattern.png") darken($dark,32%) top center;
     color: $light;
     overflow-x: hidden;
    
@@ -26,7 +26,7 @@ ul, li{
     list-style: none;
 }
 .container{
-    max-width: 1200px;
+    max-width: 1473px;
     width: 100%;
     padding: 0 1rem;
     margin: 0 auto;

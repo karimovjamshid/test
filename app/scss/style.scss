@@ -19,11 +19,13 @@
         margin-left: 2rem;
         color: $light;
         text-transform: uppercase;
-        transition: color .3s linear;
+        transition: background-image .3s linear;
         position: relative;
         font-size: 1.06rem;
-        &:hover{
-            color: $accent;
+        &:hover, &:focus{
+            background: $accent;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         &:hover::after{
             width: 100%;
@@ -44,7 +46,8 @@
     
 }
 .header-nav.fixed{
-    background-color: $gray;
+    background-color:  $dark-alt;
+    border-bottom: 1px solid $alert;
     position: fixed;
     z-index: 3000;
     padding-top: 2rem;
@@ -86,7 +89,9 @@
            font-size: 3rem;
         }
         span{
-            color: $accent;
+            background-image: $accent;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
     &__desc{
@@ -239,7 +244,7 @@
 /* Services
 ===================*/
 .services{
-    margin: 2rem 0;
+    margin: 6rem 0;
     &__header{
         margin: 0 auto 4rem auto;
         display: flex;
@@ -273,7 +278,7 @@
         }
     }
     &__item{
-        flex-basis: 28%;
+        flex-basis: 26%;
         margin: 1rem 0;
         position: relative;
         border-left: 3px solid $light;
@@ -282,12 +287,25 @@
         @media screen and (max-width: $tablet){
             flex-basis: 90%;
         }
-        &:hover{
-            cursor: pointer;
+        &:nth-child(2){
             background-color: $gray;
             transform: translateY(3rem);
+            position: relative;
+            border-left: none;
+            &::before{
+                content:'';
+                display: block;
+                position: absolute;
+                background-color: $light;
+                top: 0;
+                left: 0;
+                width: 3px;
+                height: 100%;
+            }
             .services__h3, .services__price{
-                color: $accent;
+                background: $accent;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
     }

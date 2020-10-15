@@ -12,7 +12,8 @@
  ===================*/
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 html {
   font-size: 15px;
@@ -269,7 +270,7 @@ ul, li {
     margin-top: 2rem; }
 
 .about__text {
-  font-size: 1.13rem;
+  font-size: 1.33rem;
   font-weight: 400;
   line-height: 1.5; }
 
@@ -332,7 +333,10 @@ ul, li {
       .projects-top__item:last-child .projects-top__text {
         margin-top: 2rem; }
   .projects-top__number {
-    color: linear-gradient(#d12e2e, #4E0E0E);
+    background: linear-gradient(#d12e2e, #4E0E0E);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 5rem;
     font-weight: 700; }
   .projects-top__text {
@@ -445,9 +449,9 @@ ul, li {
       -ms-flex-preferred-size: 90%;
       flex-basis: 90%; } }
   .services__item {
-    -webkit-flex-basis: 26%;
-    -ms-flex-preferred-size: 26%;
-    flex-basis: 26%;
+    -webkit-flex-basis: 28%;
+    -ms-flex-preferred-size: 28%;
+    flex-basis: 28%;
     margin: 1rem 0;
     position: relative;
     border-left: 3px solid #D9D9D9;
@@ -463,21 +467,14 @@ ul, li {
         -ms-flex-preferred-size: 90%;
         flex-basis: 90%; } }
     .services__item:nth-child(2) {
-      background-color: #3B3B3B;
       -webkit-transform: translateY(3rem);
       -ms-transform: translateY(3rem);
       transform: translateY(3rem);
-      position: relative;
+      background: -o-linear-gradient(299.02deg, #3B3B3B 0%, #2B2B2B 100%);
+      background: linear-gradient(150.98deg, #3B3B3B 0%, #2B2B2B 100%);
+      -webkit-box-shadow: 9px 4px 17px rgba(0, 0, 0, 0.73);
+      box-shadow: 9px 4px 17px rgba(0, 0, 0, 0.73);
       border-left: none; }
-      .services__item:nth-child(2)::before {
-        content: '';
-        display: block;
-        position: absolute;
-        background-color: #D9D9D9;
-        top: 0;
-        left: 0;
-        width: 3px;
-        height: 100%; }
       .services__item:nth-child(2) .services__h3, .services__item:nth-child(2) .services__price {
         background: linear-gradient(#d12e2e, #4E0E0E);
         -webkit-background-clip: text;
@@ -487,7 +484,7 @@ ul, li {
     text-transform: capitalize;
     margin-bottom: 2rem;
     position: relative;
-    font-size: 2rem;
+    font-size: 2.13rem;
     -webkit-transition: color .3s linear;
     -o-transition: color .3s linear;
     transition: color .3s linear; }
@@ -503,10 +500,28 @@ ul, li {
   .services__price {
     -webkit-transition: color .3s linear;
     -o-transition: color .3s linear;
-    transition: color .3s linear; }
+    transition: color .3s linear;
+    font-size: 2.4rem; }
   .services__text {
     line-height: 1.5;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    color: #a3a3a3; }
+    .services__text--alt {
+      color: #D9D9D9; }
+  .services__inner {
+    max-width: 377px;
+    width: 100%;
+    padding-left: 1.5rem;
+    position: relative; }
+    .services__inner::before {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: #D9D9D9;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%; }
 
 /* Contact us
 ===================*/
@@ -524,7 +539,8 @@ ul, li {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    background-color: #3B3B3B;
+    background: -o-linear-gradient(299.02deg, #3B3B3B 0%, #2B2B2B 100%);
+    background: linear-gradient(150.98deg, #3B3B3B 0%, #2B2B2B 100%);
     padding: 2rem; }
   .contact__item {
     -webkit-flex-basis: 29%;
@@ -563,7 +579,8 @@ ul, li {
       border-bottom: 3px solid #D9D9D9;
       padding: 1em 1em .5em 0;
       color: #D9D9D9;
-      font-size: 1.1rem; }
+      font-size: 1.1rem;
+      font-family: "mainFont", sans-serif; }
       .contact__item input:focus {
         outline: none; }
   .contact__name {
@@ -616,7 +633,10 @@ ul, li {
     font-size: 4rem;
     text-transform: uppercase; }
     .address__title span {
-      color: linear-gradient(#d12e2e, #4E0E0E); }
+      background: linear-gradient(#d12e2e, #4E0E0E);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent; }
 
 .address-group {
   display: -webkit-box;
